@@ -1,0 +1,91 @@
+.body {
+    background-color: #04395E;
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.form {
+    width: 35rem;
+    height: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: rgba(168, 167, 167, 0.595);
+    color: white;
+    border-top: 5px solid #FF1F66;
+    border-bottom: #04395E;
+    border-left: #04395E;
+    border-right: #04395E; 
+}
+
+.button {
+    background-color: #FF1F66;
+    border-radius: 7px;
+    border: 1px solid #04395E;
+    color: white;
+    font-size: 1.5rem;
+    height: 50px;
+    width: 100px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+.about-img {
+    width: 20rem;
+    margin: 1rem;
+    border: 7px dotted #FF1F66;
+}
+
+.about-img:hover {
+    width: 30rem;
+    border: 10px dotted #FF1F66;
+}
+
+.about-text {
+    font-size: 1.3rem;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail {
+    margin: 1rem;
+    border: 5px solid #FF1F66;
+    border-radius: 5px;
+}
+
+.modal-body {
+    background-color: #04395E;
+}
+
+@media (max-width: 700px) {
+    .form {
+        width: 90vw;
+    }
+
+    .about-img {
+        margin-left: 0;
+    }
+}
