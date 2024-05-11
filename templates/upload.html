@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    {% if logged_in %}
+    <h2 class="title">Upload Image</h2>
+    <form action="/upload-file" method="post" enctype="multipart/form-data">
+        <label for="image">Select Image:</label><br>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        
+        <label for="name">Name (optional):</label><br>
+        <input class="form" type="text" id="name" name="name"><br>
+        
+        <label for="category">Category:</label><br>
+        <select class="form" id="category" name="category" required>
+            <option value="">Select category...</option>
+            <option value="BabyFelix">Baby Felix</option>
+            <option value="SleepingBeauty">Sleeping Beauty</option>
+            <option value="CaughtInTheAct">Caught In The Act</option>
+            <option value="CuriousFelix">Curious Felix</option>
+        </select><br><br>
+        
+        <button class="button" type="submit">Upload</button>
+    </form>
+    {% else %}
+    <h2 class="title">Login in order to upload images!</h2>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="about-container">
+    <h2 class="title">Photo Gallery</h2>
+    {% for category, paths in thumbnail_paths.items() %}
+    <h3>#{{ category }}</h3>
+    <div class="image-container">
+        {% for path in paths %}
+            {% if logged_in %}
+            <a href="{{ url_for('uploaded_file', filename=path[:-10]+path[-4:]) }}">
+                <img class="thumbnail" src="{{ url_for('uploaded_file', filename=path) }}" alt="thumbnail">
+            </a>
+            {% else %}
+            <img class="thumbnail" src="{{ url_for('uploaded_file', filename=path) }}" alt="thumbnail">
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
