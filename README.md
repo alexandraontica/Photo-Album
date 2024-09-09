@@ -1,5 +1,3 @@
-*Onțică Alexandra-Elena - 311CB*
-
 # Photo Management Web App
 
 To start the Flask server of the app (*app.py*), run the following commands in the root directory:
